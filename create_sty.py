@@ -2,13 +2,14 @@ import os
 import json
 
 # download zip file from https://fontawesome.com/ and extract into fontawesome directory.
-INPUT_FILE = os.path.join("fontawesome", "advanced-options", "metadata", "icons.json")
-OUTPUT_FILE = 'fontawesome5.sty'
+INPUT_FILE = os.path.join("fontawesome-free-6.5.1-desktop", "metadata", "icons.json")
+# INPUT_FILE = os.path.join("fontawesome-pro-6.5.1-desktop", "metadata", "icons.json")
+OUTPUT_FILE = 'fontawesome6.sty'
 
 OUTPUT_HEADER = r'''
 % Identify this package.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{fontawesome5}[2018/01/04 v5.0.2 font awesome icons]
+\ProvidesPackage{fontawesome6}[2024/01/06 v6.5.1 font awesome icons]
 % Requirements to use.
 \usepackage{fontspec}
 % Configure a directory location for fonts(default: 'fonts/')
@@ -22,18 +23,18 @@ OUTPUT_HEADER = r'''
     UprightFont=*-Regular-400,
     ItalicFont=*-Light-300,
     BoldFont=*-Solid-900,
-  ]{Font Awesome 5 Pro}
+  ]{Font Awesome 6 Pro}
 }
 \ProcessOptions\relax
 % Define shortcut to load the Font Awesome font for brands.
-\newfontfamily{\FAbrands}[Path=\@fontdir]{Font Awesome 5 Brands-Regular-400}
+\newfontfamily{\FAbrands}[Path=\@fontdir]{Font Awesome 6 Brands-Regular-400}
 % Define shortcut to load the Font Awesome font.
 \@ifundefined{FA}{%
 \newfontfamily\FA[
   Path=\@fontdir,
   UprightFont=*-Regular-400,
   BoldFont=*-Solid-900,
-]{Font Awesome 5 Free}
+]{Font Awesome 6 Free}
 }{}
 % Generic command displaying an icon by its name.
 \newcommand*{\faicon}[1]{{

@@ -1,9 +1,9 @@
-latex-fontawesome5
+latex-fontawesome6
 =================
 
-Original project is [furl's latex-fontawesome](https://github.com/furl/latex-fontawesome). I edited this project to use latest [FontAwesome](https://fontawesome.com/) icons in XeLaTeX.
+Original project is [JanHendrikDolling's latex-fontawesome5](https://github.com/JanHendrikDolling/latex-fontawesome5). I edited this project to use latest [FontAwesome](https://fontawesome.com/) icons in XeLaTeX.
 
-The current version of FontAwesome icons used is 5.0.2.
+The current version of FontAwesome icons used is 6.5.1.
 
 How to Use
 ----------
@@ -16,9 +16,9 @@ How to Use
 
 
 ### Usage
-1. Download the `fontawesome5.sty` file and put it in the same directory as the LaTeX file using the icons.
-2. Exctract the `.otf` files (`use-on-desktop` directory inside the downloaded zip) into the font directory in the same directory as the LaTeX file using the icons.
-3. Include the package as normal (in the preamble of the `.tex` file, add the line `\usepackage{fontawesome5}`).
+1. Download the `fontawesome6.sty` file and put it in the same directory as the LaTeX file using the icons.
+2. Exctract the `.otf` files (`otfs` directory inside the downloaded zip) into the `fonts` directory in the same directory as the LaTeX file using the icons.
+3. Include the package as normal (in the preamble of the `.tex` file, add the line `\usepackage{fontawesome6}`).
 4. Use an icon by typing `\faicon{address-book}`. Other icons than `address-book` can be found on the [fontawesome](https://fontawesome.com/icons?d=gallery) website.
 
 
@@ -26,7 +26,7 @@ How to Use
 
 Free version
 ```tex
-\usepackage{fontawesome5}
+\usepackage{fontawesome6}
 
 \faicon{font-awesome}
 Normal: \faicon{address-book}
@@ -39,7 +39,7 @@ $ xelatex example-free.tex
 
 Pro version
 ```tex
-\usepackage[pro]{fontawesome5}
+\usepackage[pro]{fontawesome6}
 
 \faicon{font-awesome}
 Normal: \faicon{alarm-clock}
@@ -55,14 +55,14 @@ Make Latest fontawesome.sty
 ---------------------------
 
 ### Requirements
-* You need python to create `fontawesome5.sty` from scratch.
-* Download FontAwesome from [here](https://fontawesome.com/ and exctact the zip file into `fontawesome` next to the `create_sty.py` file.
+* You need python to create `fontawesome6.sty` from scratch.
+* Download FontAwesome from [here](https://fontawesome.com/ and exctact the zip file `fontawesome-free-6.5.1-desktop.zip` into this directory.
 
 ### Usage
 ```bash
 $ python create_sty.py
 ```
-This should result in the creation of latest ``fontawesome5.sty``
+This should result in the creation of latest ``fontawesome6.sty``
 
 
 Contact
